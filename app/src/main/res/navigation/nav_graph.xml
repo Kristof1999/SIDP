@@ -3,11 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/cameraFragment">
-
+    app:startDestination="@id/homeFragment">
     <fragment
-        android:id="@+id/cameraFragment"
-        android:name="hu.kristof.nagy.sidp.CameraFragment"
-        android:label="fragment_camera"
-        tools:layout="@layout/fragment_camera" />
+        android:id="@+id/homeFragment"
+        android:name="hu.kristof.nagy.sidp.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_audioRecorderFragment"
+            app:destination="@id/audioRecorderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/audioRecorderFragment"
+        android:name="hu.kristof.nagy.sidp.AudioRecorderFragment"
+        android:label="fragment_audio_recorder"
+        tools:layout="@layout/fragment_audio_recorder" />
 </navigation>
